@@ -1,0 +1,134 @@
+<!Doctype html>
+
+<html lang="fr"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        header{
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li{
+            display: inline-block;
+            margin: 0 1rem;
+        }
+        nav ul li a{
+            color: #fff;
+            text-decoration: none;
+        }
+        main{
+            padding: 1rem;
+        }
+        section{
+            margin-bottom: 1rem;
+        }
+        footer{
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        @media screen and (min-width: 768px){
+            header{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            nav ul li{
+                margin: 0;
+            }
+            main{
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+            section{
+                width: 30%;
+            }
+            footer{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    </style>
+    </head>
+   
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">A propos</a></li>
+                    <li><a href="#">Compétences</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                
+                <p>Je suis un développeur web junior</p>
+            </section>
+            <section>
+                <h2>A propos</h2>
+                <p>Je suis un développeur web junior</p>
+            </section>
+            <section>
+                <h3>Compétences</h3>
+                <p>Je suis un développeur web junior</p>
+            </section>
+            <section>
+                <h4>Portfolio</h4>
+                <p>Je suis un développeur web junior</p>
+            </section>
+            <section>
+                <h5>Contact</h5>
+                <p>Je suis un développeur web junior</p>
+            </section>
+        </main>
+        <footer>
+            <p>Je suis un développeur web junior</p>
+        </footer>
+        <script>
+            const nav = document.querySelector('nav');
+            const navTop = nav.offsetTop;
+            function fixNav(){
+                if(window.scrollY >= navTop){
+                    document.body.style.paddingTop = nav.offsetHeight + 'px';
+                    document.body.classList.add('fixed-nav');
+                }else{
+                    document.body.style.paddingTop = 0;
+                    document.body.classList.remove('fixed-nav');
+                }
+            }
+            window.addEventListener('scroll', fixNav);
+        </script>
+    </body>
+</html>
+
+
+
+     
+
+
